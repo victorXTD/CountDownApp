@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CountDownApp</string>
+    <string name="bt_1">1min</string>
+    <string name="bt_2">5min</string>
+    <string name="bt_3">10min</string>
+    <string name="bt_4">30min</string>
+    <string name="bt_5">1hour</string>
+    <string name="bt_customized">Customized</string>
+    <string name="bt_pause">pause</string>
+    <string name="bt_cancel">cancel</string>
+</resources>
