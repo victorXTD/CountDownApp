@@ -150,9 +150,9 @@ public class CountDownActivity extends AppCompatActivity {
         bt_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("tag","1");
+                Log.d("tag", "1");
 
-                Log.d("tag","4");
+                Log.d("tag", "4");
                 stopFlag = true;
                 bar.setProgress(0);
             }
@@ -330,7 +330,8 @@ public class CountDownActivity extends AppCompatActivity {
         }
     }
 
-    public void setFormattedText(TextView bt, int num) {           //设置格式化显示数字
+    //设置格式化显示数字
+    public void setFormattedText(TextView bt, int num) {
         if (num >= 0 && num < 10)
             bt.setText("0" + num);
         else
