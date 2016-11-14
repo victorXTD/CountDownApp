@@ -236,6 +236,7 @@ public class CountDownActivity extends AppCompatActivity {
                     CountDownActivity.this.handler.sendMessage(msg);
 
                     if (num1 == 0 && num2 == 0) {
+                        //时间为0时先判断停止符
                         if (!stopFlag) {
                             try {
                                 if (ringUri != null) {
@@ -247,9 +248,10 @@ public class CountDownActivity extends AppCompatActivity {
                                     Log.d("tag", String.valueOf(mp));
                                     mp.start();
 
-
+                                    //设置进度条
                                     bar.setProgress(100);
 
+                                    //弹出计时结束dialog
                                     Looper.prepare();
                                     CreateDialog(mp);
                                     Looper.loop();
@@ -261,6 +263,7 @@ public class CountDownActivity extends AppCompatActivity {
                         break;
                     }
 
+                    //每次倒数时判断停止符
                     if (!stopFlag) {
                         if (num1 == 0) {
                             num2--;
@@ -268,8 +271,9 @@ public class CountDownActivity extends AppCompatActivity {
                         }
                         num1 -= 1;
 
-
+                        //计算已计时的百分比
                         i = (j / ((day * 24 * 60 * 60) + sec)) * 100;
+                        //近似整形设置进度条
                         bar.setProgress((int) i);
                         j += 1;
 
